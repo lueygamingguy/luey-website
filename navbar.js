@@ -1,17 +1,15 @@
-// Loads navbar.html into the placeholder and sets up mobile toggle.
+// Load navbar
 fetch('navbar.html')
-  .then(res => res.text())
+  .then(response => response.text())
   .then(html => {
     document.getElementById('navbar-placeholder').innerHTML = html;
-    // mobile toggle
-    const toggle = document.getElementById('nav-toggle');
-    const links = document.getElementById('navLinks');
-    if (toggle && links) {
-      toggle.addEventListener('click', () => {
-        links.classList.toggle('open');
-      });
-    }
   })
-  .catch(err => {
-    console.error('Could not load navbar:', err);
-  });
+  .catch(err => console.error('Error loading navbar:', err));
+
+// Load footer
+fetch('footer.html')
+  .then(response => response.text())
+  .then(html => {
+    document.getElementById('footer-placeholder').innerHTML = html;
+  })
+  .catch(err => console.error('Error loading footer:', err));
