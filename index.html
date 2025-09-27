@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Luey Gaming Guy</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar will be loaded by navbar.js -->
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">Luey Gaming Guy</h1>
+        <p class="hero-sub">Twitch streamer • Retro store • Repairs & mods</p>
+        <div class="hero-cta">
+          <a class="btn" href="https://www.twitch.tv/luey_gaming_guy" target="_blank" rel="noopener">View Stream</a>
+          <a class="btn ghost" href="https://discord.com/invite/J9PaPxggd8" target="_blank" rel="noopener">Join Community</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro container">
+      <div class="card left">
+        <h2>About</h2>
+        <p>
+          Luey Gaming Guy Inc. is a full gaming and community experience: we sell retro games & consoles,
+          stream on Twitch, and provide repairs & Game Boy modding services. Come hang out — there's something
+          for everyone.
+        </p>
+        <a class="btn-outline" href="content.html">Learn More</a>
+      </div>
+
+      <div class="card right">
+        <img src="images/ShotoMascot.png" alt="Shoto mascot" class="mascot">
+      </div>
+    </section>
+
+    <section class="services dark">
+      <div class="container services-grid">
+        <a class="serv-box" href="shop.html"><img src="images/IconShop.png" alt=""><span>Shop</span></a>
+        <a class="serv-box" href="content.html"><img src="images/IconGaming.png" alt=""><span>Gaming</span></a>
+        <a class="serv-box" href="custom-orders.html"><img src="images/IconRefurbish.png" alt=""><span>Refurbishing</span></a>
+        <a class="serv-box" href="custom-orders.html"><img src="images/IconModding.png" alt=""><span>Mods/Customs</span></a>
+      </div>
+    </section>
+
+    <section class="partner container">
+      <div class="partner-card left">
+        <h2>Rogue Energy Partner</h2>
+        <p><strong>10% OFF CODE: LueyGaming</strong></p>
+        <p>Great flavors — caffeine and caffeine-free options. Use the code to support the stream!</p>
+        <a class="btn" href="https://rogueenergy.com/?ref=Lueygaming" target="_blank" rel="noopener">Shop Rogue</a>
+      </div>
+      <div class="partner-card right">
+        <img src="images/Rogue.png" alt="Rogue Energy" class="partner-img">
+      </div>
+    </section>
+
+    <section class="stream container">
+      <div class="stream-top">
+        <img src="images/LGGLogo.png" alt="LGG logo" class="stream-logo">
+      </div>
+
+      <div class="stream-row">
+        <!-- IMPORTANT: replace 'localhost' below with your real domain (e.g. lueygaming.com) when you deploy.
+             For local testing 'localhost' works. -->
+        <iframe
+          src="https://player.twitch.tv/?channel=luey_gaming_guy&parent=localhost"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen="true"
+          class="stream-feed"
+          title="Twitch stream"
+        ></iframe>
+
+        <div class="emotes-col">
+          <img class="emote" src="images/ShotoHuh.gif" alt="emote">
+          <img class="emote" src="images/ShotoCozy.png" alt="emote">
+          <img class="emote" src="images/ShotoArrive.gif" alt="emote">
+          <img class="emote" src="images/ShotoNotes.gif" alt="emote">
+          <img class="emote" src="images/ShotoKawaii.png" alt="emote">
+          <img class="emote" src="images/ShotoLaugh.gif" alt="emote">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="navbar.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

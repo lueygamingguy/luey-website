@@ -1,0 +1,72 @@
+:root{
+  --bg:#0f0f10;
+  --card:#efefef;
+  --accent:#00c2a8;
+  --muted:#d0d0d0;
+  --dark:#1d1d1d;
+  --glass: rgba(255,255,255,0.03);
+  --maxwidth:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#eaeaea}
+.container{max-width:var(--maxwidth); margin:0 auto; padding:30px;}
+
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+
+/* NAV */
+.nav{background:linear-gradient(0deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02)); border-bottom:1px solid rgba(255,255,255,0.03)}
+.nav-inner{display:flex; align-items:center; justify-content:space-between; padding:12px 20px;}
+.brand{font-family:"Press Start 2P", monospace; font-size:14px; color:var(--accent)}
+.nav-links{list-style:none; display:flex; gap:18px; margin:0; padding:0;}
+.nav-links a{color:var(--muted); font-weight:600; font-size:14px}
+.nav-toggle{display:none; background:none; border:0; color:var(--muted); font-size:20px}
+
+/* HERO */
+.hero{background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.65)), url('images/BackgroundLines.gif') center/cover no-repeat; padding:56px 0; color:#fff}
+.hero-inner{max-width:var(--maxwidth); margin:0 auto; padding:40px;}
+.hero-title{font-family:"Press Start 2P", monospace; font-size:28px; margin:0 0 10px}
+.hero-sub{margin:0 0 18px; color:var(--muted)}
+.btn{background:var(--accent); color:#021012; padding:10px 14px; border-radius:8px; font-weight:700; display:inline-block}
+.btn.ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:#fff}
+.btn-outline{display:inline-block; padding:8px 12px; border:1px dashed rgba(255,255,255,0.08); border-radius:8px; color:var(--muted)}
+
+/* MAIN CARDS */
+.intro{display:flex; gap:20px; align-items:center; padding:40px 20px;}
+.card{flex:1; padding:20px; border-radius:12px; background:var(--glass)}
+.card.right{text-align:center}
+.mascot{width:220px; margin:0 auto}
+
+/* Services */
+.services{padding:24px 0}
+.services.dark{background:var(--dark)}
+.services-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; align-items:stretch}
+.serv-box{display:flex; flex-direction:column; align-items:center; justify-content:center; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:10px; color:var(--muted)}
+.serv-box img{width:60px; margin-bottom:10px}
+
+/* Partner */
+.partner{display:flex; gap:20px; padding:40px 20px; align-items:center}
+.partner-card{flex:1; padding:20px; border-radius:12px; background:var(--glass)}
+.partner-img{max-width:200px}
+
+/* Stream */
+.stream{padding:30px 20px}
+.stream-row{display:flex; gap:18px; align-items:flex-start}
+.stream-feed{width:640px; height:360px; border-radius:8px; background:#000}
+.emotes-col{display:flex; flex-direction:column; gap:8px}
+.emote{width:90px}
+
+/* Footer */
+.site-footer{padding:24px; background:#0b0b0b; color:var(--muted); margin-top:40px}
+.footer-inner{display:flex; justify-content:space-between; gap:10px; align-items:center}
+
+/* small screens */
+@media (max-width:900px){
+  .intro{flex-direction:column}
+  .stream-row{flex-direction:column}
+  .stream-feed{width:100%; height:320px}
+  .nav-toggle{display:block}
+  .nav-links{position:absolute; right:20px; top:56px; background:var(--dark); padding:12px; border-radius:8px; display:none; flex-direction:column}
+  .nav-links.open{display:flex}
+}
